@@ -8,8 +8,6 @@ import {
   Delete,
 } from '@nestjs/common';
 import { RunService } from './run.service';
-import { CreateRunDto } from './dto/create-run.dto';
-import { UpdateRunDto } from './dto/update-run.dto';
 
 @Controller('run')
 export class RunController {
@@ -17,6 +15,6 @@ export class RunController {
 
   @Get()
   find() {
-    return this.runService.findAll();
+    return this.runService.run();
   }
 }
