@@ -1,9 +1,10 @@
-import { Injectable } from '@nestjs/common';
+// https://app.codility.com/programmers/trainings/9/binary_gap/
+// https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
+
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
-// https://app.codility.com/programmers/trainings/9/binary_gap/
-function solution(N) {
+function binary_gap(N) {
   // write your code in JavaScript (Node.js 8.9.4)
   // convert to binary
   const binaryN = (N >>> 0).toString(2);
