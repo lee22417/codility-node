@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { RunService } from './run.service';
 
@@ -14,7 +15,7 @@ export class RunController {
   constructor(private readonly runService: RunService) {}
 
   @Get()
-  find() {
-    return this.runService.run();
+  find(@Query('input') input) {
+    return this.runService.run(input);
   }
 }

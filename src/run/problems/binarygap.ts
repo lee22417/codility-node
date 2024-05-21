@@ -12,15 +12,15 @@ function binary_gap(N) {
 
   // remove the 0 of the end
   let strN: string = binaryN;
-  strN = strN.substr(0, strN.lastIndexOf('1') + 1);
+  strN = strN.slice(0, strN.lastIndexOf('1') + 1);
 
   //
   while (true) {
     if (strN.length == 0) break;
-    strN = strN.substr(1, strN.length);
+    strN = strN.slice(1, strN.length);
     const numOfZero = strN.indexOf('1');
     if (answer < numOfZero) answer = numOfZero;
-    strN = strN.substr(numOfZero, strN.length);
+    strN = strN.slice(numOfZero, strN.length);
   }
 
   return answer;
